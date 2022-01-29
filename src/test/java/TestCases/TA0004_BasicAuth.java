@@ -1,11 +1,13 @@
 package TestCases;
 
+import org.testng.Assert;
+
 import io.restassured.RestAssured;
 import io.restassured.authentication.PreemptiveBasicAuthScheme;
 import io.restassured.http.Method;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
-import junit.framework.Assert;
+
 
 public class TA0004_BasicAuth {
 
