@@ -1,5 +1,8 @@
 package TestCases;
+import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import com.restassured.base.BaseClass;
 
 import io.restassured.RestAssured;
 import io.restassured.http.Header;
@@ -8,27 +11,28 @@ import io.restassured.http.Method;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
-import junit.framework.Assert;
 
-public class TA0001_GET_Request {
+
+public class TA0001_GET_getBookingDetails extends BaseClass{
 	
 	@Test
 	void getBookingDetails()
 	{
 		// specify the base url
-		RestAssured.baseURI="https://restful-booker.herokuapp.com/booking";
+		RestAssured.baseURI="https://restful-booker.herokuapp.com/";
 		
 		// Request object
 		RequestSpecification httpRequest= RestAssured.given();
 		
 		// Response object
-		Response response= httpRequest.request(Method.GET, "/1");
+		Response response= httpRequest.request(Method.GET, "/booking/227");
 		
-		// Print response in the console window
+		// Print response in the console window	
 		String responseBody= response.getBody().asString();
 		System.out.println("Response Body is: "+ responseBody);
 		Assert.assertEquals(responseBody.contains("firstname"), true);
-
+		//log.info("response body found");
+		
 		// getting every node of a JSON file
 		JsonPath jsonpath= response.jsonPath();
 		String nodeValue1= jsonpath.get("firstname");
@@ -36,13 +40,14 @@ public class TA0001_GET_Request {
 		String nodeValue3= jsonpath.get("totalprice").toString();
 		String nodeValue4= jsonpath.get("depositpaid").toString();
 		String nodeValue5= jsonpath.get("bookingdates").toString();
+		//printing every node of JSON file
 		System.out.println(nodeValue1);
 		System.out.println(nodeValue2);
 		System.out.println(nodeValue3);
 		System.out.println(nodeValue4);
 		System.out.println(nodeValue5);
 		
-		//Assert.assertEquals(jsonpath.get("firstname"), "James"); // these values are not certain. depends on  the weather.
+		//Assert.assertEquals(jsonpath.get("firstname"), "James"); // these values are not certain.
 		
 		// Status code validation 
 		int statusCode= response.getStatusCode();
@@ -65,5 +70,3 @@ public class TA0001_GET_Request {
 	
 
 }
-
-//https://gorest.co.in/

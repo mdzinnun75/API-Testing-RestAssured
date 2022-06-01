@@ -12,31 +12,40 @@ import io.restassured.specification.RequestSpecification;
 
 
 
-public class TA0002_POST_Request {
+public class TA0003_POST_createBooking {
 	
 	@Test
 	void rest() {
-
 		
 		// specify the base url
-		RestAssured.baseURI="http://dummy.restapiexample.com/api/v1";
+		RestAssured.baseURI="https://restful-booker.herokuapp.com/";
 		
 		// Request object
 		RequestSpecification httpRequest= RestAssured.given();
 		
 		// Request payload sending along with post request
-		JSONObject requestParams = new JSONObject();
-		requestParams.put("name", "Naeem");
-		requestParams.put("salary", "123");
-		requestParams.put("age", "23");
-		requestParams.put("id", 25);
+		JSONObject jsonBooking = new JSONObject();	
+		jsonBooking.put("firstname", "Tom");
+		jsonBooking.put("lastname", "The Cat");
+		jsonBooking.put("totalprice", 235);
+		jsonBooking.put("depositpaid", true);
+		jsonBooking.put("additionalneeds", "a BIG fish!");
+			
+			JSONObject jsonBookingDates = new JSONObject();
+			jsonBookingDates.put("checkin", "2021-02-23");
+			jsonBookingDates.put("checkout", "2020-10-23");
 
+		jsonBooking.put("bookingdates", jsonBookingDates);
 		
-		httpRequest.header("Content-Type", "application/json");
-		httpRequest.body(requestParams.toJSONString());
+
+		httpRequest.body(jsonBooking.toJSONString());
+		
+		// setting cookie for authentication as per API Documentation
+		httpRequest.header("Content-Type", "application/json; charset=utf-8");
+		
 		
 		// Response object
-		Response response=httpRequest.request(Method.POST, "/create");
+		Response response=httpRequest.request(Method.POST, "/booking");
 		
 		
 		// Print response in the console window
@@ -56,22 +65,17 @@ public class TA0002_POST_Request {
 		// Validating Headers
 		String contentType=response.header("Content-Type");
 		System.out.println("Content Type: "+ contentType);
-		Assert.assertEquals(contentType, "application/json");
+		Assert.assertEquals(true, contentType.contains("application/json"));
 		
 		String server=response.header("Server");
 		System.out.println("Server name: "+ server);
-		Assert.assertEquals(server, "nginx");
+		Assert.assertEquals(server, "Cowboy");
 		
 		//String contentType=response.contentType();
 		//System.out.println(contentType);
 		Headers headers=response.getHeaders();
 		System.out.println("Headers:"+headers);
 		
-		
-		// success message verification
-		String successCode= response.jsonPath().get("message");
-		System.out.println(successCode);
-		Assert.assertEquals(successCode, "Successfully! Record has been added.");
 		
 		
 	}

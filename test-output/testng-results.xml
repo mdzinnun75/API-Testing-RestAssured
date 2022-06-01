@@ -1,117 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="9019" started-at="2022-01-29T16:43:58 BDT" finished-at="2022-01-29T16:44:07 BDT">
+  <suite started-at="2022-06-01T20:23:18 BDT" name="Default suite" finished-at="2022-06-01T20:23:21 BDT" duration-ms="3542">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="9019" started-at="2022-01-29T16:43:58 BDT" finished-at="2022-01-29T16:44:07 BDT">
-      <class name="TestCases.TA0005_DataDrivenTest_AddNewEmployee">
-        <test-method status="PASS" signature="postNewEmployees(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:TestCases.TA0005_DataDrivenTest_AddNewEmployee@305fd85d]" name="postNewEmployees" duration-ms="3205" started-at="2022-01-29T16:43:58 BDT" data-provider="empDataProvider" finished-at="2022-01-29T16:44:01 BDT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[1]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[cricket]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[2022-01-15T10:12:41.960Z]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[TRUE]]>
-              </value>
-            </param>
-          </params>
+    <test started-at="2022-06-01T20:23:18 BDT" name="Default test" finished-at="2022-06-01T20:23:21 BDT" duration-ms="3542">
+      <class name="TestCases.TC0008_BasicAuth">
+        <test-method signature="auth()[pri:0, instance:TestCases.TC0008_BasicAuth@7671cb68]" started-at="2022-06-01T20:23:18 BDT" name="auth" finished-at="2022-06-01T20:23:21 BDT" duration-ms="3510" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- postNewEmployees -->
-        <test-method status="PASS" signature="postNewEmployees(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:TestCases.TA0005_DataDrivenTest_AddNewEmployee@305fd85d]" name="postNewEmployees" duration-ms="1807" started-at="2022-01-29T16:44:01 BDT" data-provider="empDataProvider" finished-at="2022-01-29T16:44:03 BDT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[2]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[football]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[2022-01-17T13:12:41.960Z]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[TRUE]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- postNewEmployees -->
-        <test-method status="PASS" signature="postNewEmployees(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:TestCases.TA0005_DataDrivenTest_AddNewEmployee@305fd85d]" name="postNewEmployees" duration-ms="1635" started-at="2022-01-29T16:44:03 BDT" data-provider="empDataProvider" finished-at="2022-01-29T16:44:05 BDT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[3]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[golf]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[2022-01-20T19:12:41.960Z]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[TRUE]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- postNewEmployees -->
-        <test-method status="PASS" signature="postNewEmployees(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:TestCases.TA0005_DataDrivenTest_AddNewEmployee@305fd85d]" name="postNewEmployees" duration-ms="1740" started-at="2022-01-29T16:44:05 BDT" data-provider="empDataProvider" finished-at="2022-01-29T16:44:07 BDT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[4]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[baseball]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[2022-01-22T10:12:41.960Z]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[TRUE]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- postNewEmployees -->
-      </class> <!-- TestCases.TA0005_DataDrivenTest_AddNewEmployee -->
+        </test-method> <!-- auth -->
+      </class> <!-- TestCases.TC0008_BasicAuth -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

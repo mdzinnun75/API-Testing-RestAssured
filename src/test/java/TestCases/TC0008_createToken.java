@@ -1,33 +1,38 @@
 package TestCases;
 
+import org.json.simple.JSONObject;
 import org.testng.Assert;
+import org.testng.annotations.Test;
 
 import io.restassured.RestAssured;
+import io.restassured.authentication.BasicAuthScheme;
 import io.restassured.authentication.PreemptiveBasicAuthScheme;
 import io.restassured.http.Method;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
 
-public class TA0004_BasicAuth {
+public class TC0008_createToken {
 
-	public static void main(String[] args) {
+	@Test
+	void auth() {
 		
 		// specify the base url
-		RestAssured.baseURI="http://restapi.demoqa.com/authentication/CheckForAuthentication";
-		
-		// Basic authenticaton -> neccessary to set before sending the request.
-		PreemptiveBasicAuthScheme authscheme = new PreemptiveBasicAuthScheme();
-		authscheme.setUserName("someone");
-		authscheme.setPassword("656565");
-		
-		RestAssured.authentication=authscheme;
+		RestAssured.baseURI="https://restful-booker.herokuapp.com/";
 		
 		// Request object
 		RequestSpecification httpRequest= RestAssured.given();
 		
+		JSONObject auth = new JSONObject();	
+		auth.put("username", "admin");
+		auth.put("password", "password123");
+			
+		// setting header as per API documentation
+		httpRequest.header("Content-Type", "application/json");
+		httpRequest.body(auth.toJSONString());
+		
 		// Response object
-		Response response= httpRequest.request(Method.GET, "/");
+		Response response= httpRequest.request(Method.POST, "/auth");
 		
 		// Print response in the console window
 		String responseBody= response.getBody().asString();
