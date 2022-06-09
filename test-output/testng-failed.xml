@@ -3,11 +3,19 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestCases.TC0008_BasicAuth">
+      <class name="com.restfulbooker.testcases.TC0008_createToken">
         <methods>
-          <include name="auth"/>
+          <include name="checkContentEncoding"/>
+          <include name="createToken"/>
+          <include name="checkResponseTime"/>
+          <include name="getAllHeaders"/>
+          <include name="checkServer"/>
+          <include name="checkStatusCode"/>
+          <include name="checkStatusLine"/>
+          <include name="checkResponseBody"/>
+          <include name="setup"/>
         </methods>
-      </class> <!-- TestCases.TC0008_BasicAuth -->
+      </class> <!-- com.restfulbooker.testcases.TC0008_createToken -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

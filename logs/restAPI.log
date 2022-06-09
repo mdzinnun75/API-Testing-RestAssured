@@ -1,0 +1,92 @@
+2022-06-08 12:31:48 INFO  RestfulBooker:76 - ==========================| checking response time |==========================
+2022-06-08 12:31:48 INFO  RestfulBooker:80 - Response Time -->  11985
+2022-06-08 12:31:48 WARN  RestfulBooker:82 - response time is greater than 3000
+2022-06-08 12:31:48 INFO  RestfulBooker:92 - ==========================| checking response server |==========================
+2022-06-08 12:31:48 INFO  RestfulBooker:96 - Server --> Cowboy
+2022-06-08 12:31:48 INFO  RestfulBooker:53 - ==========================| checking status code |==========================
+2022-06-08 12:31:48 INFO  RestfulBooker:57 - Status code --> 200
+2022-06-08 12:31:48 INFO  RestfulBooker:64 - ==========================| checking status line |==========================
+2022-06-08 12:31:48 INFO  RestfulBooker:68 - Status Line --> HTTP/1.1 200 OK
+2022-06-08 12:31:48 INFO  RestfulBooker:115 - ==========================| checking all the headers|==========================
+2022-06-08 12:31:48 INFO  RestfulBooker:122 - Server		Cowboy
+2022-06-08 12:31:48 INFO  RestfulBooker:122 - Connection		keep-alive
+2022-06-08 12:31:48 INFO  RestfulBooker:122 - X-Powered-By		Express
+2022-06-08 12:31:48 INFO  RestfulBooker:122 - Content-Type		application/json; charset=utf-8
+2022-06-08 12:31:48 INFO  RestfulBooker:122 - Content-Length		4357803
+2022-06-08 12:31:48 INFO  RestfulBooker:122 - Etag		W/"427eab-H9IQZNEcUs/6pzYQhpOFdRIaORc"
+2022-06-08 12:31:48 INFO  RestfulBooker:122 - Date		Wed, 08 Jun 2022 06:31:09 GMT
+2022-06-08 12:31:48 INFO  RestfulBooker:122 - Via		1.1 vegur
+2022-06-08 12:31:48 INFO  RestfulBooker:39 - ========================<<|TA0003_POST_createBooking|>>========================
+2022-06-08 12:31:48 INFO  RestfulBooker:47 - ==========================| sending request payload |=========================
+2022-06-08 12:31:53 INFO  RestfulBooker:94 - ==========================| checking booking id |==========================
+2022-06-08 12:31:53 INFO  RestfulBooker:100 - 212880
+2022-06-08 12:31:53 INFO  RestfulBooker:145 - ==========================| checking content type |==========================
+2022-06-08 12:31:53 INFO  RestfulBooker:149 - Content Type: application/json; charset=utf-8
+2022-06-08 12:31:53 INFO  RestfulBooker:83 - ==========================| checking response body |=========================
+2022-06-08 12:31:53 INFO  RestfulBooker:87 - Response Body is: {"bookingid":212880,"booking":{"firstname":"Clark","lastname":"William","totalprice":213,"depositpaid":true,"bookingdates":{"checkin":"2022-08-07","checkout":"2022-10-06"},"additionalneeds":"Lunch"}}
+2022-06-08 12:31:53 INFO  RestfulBooker:129 - ==========================| checking response time |==========================
+2022-06-08 12:31:53 INFO  RestfulBooker:133 - Response Time -->  4199
+2022-06-08 12:31:53 WARN  RestfulBooker:135 - response time is greater than 3000
+2022-06-08 12:31:53 INFO  RestfulBooker:157 - ==========================| checking response server |==========================
+2022-06-08 12:31:53 INFO  RestfulBooker:160 - Server name: Cowboy
+2022-06-08 12:31:53 INFO  RestfulBooker:106 - ==========================| checking status code |==========================
+2022-06-08 12:31:53 INFO  RestfulBooker:110 - Status code is: 200
+2022-06-08 12:31:53 INFO  RestfulBooker:118 - ==========================| checking status line |==========================
+2022-06-08 12:31:53 INFO  RestfulBooker:122 - Status Line: HTTP/1.1 200 OK
+2022-06-08 12:31:53 INFO  RestfulBooker:168 - ==========================| checking all the headers|==========================
+2022-06-09 12:03:44 INFO  RestfulBooker:25 - ========================<<|TC0008_createToken|>>========================
+2022-06-09 12:03:49 INFO  RestfulBooker:107 - ==========================| checking content type |==========================
+2022-06-09 12:03:49 INFO  RestfulBooker:48 - ==========================| checking response body |=========================
+2022-06-09 12:03:49 INFO  RestfulBooker:82 - ==========================| checking response time |==========================
+2022-06-09 12:03:49 INFO  RestfulBooker:97 - ==========================| checking response server |==========================
+2022-06-09 12:03:49 INFO  RestfulBooker:59 - ==========================| checking status code |==========================
+2022-06-09 12:03:49 INFO  RestfulBooker:71 - ==========================| checking status line |==========================
+2022-06-09 12:03:49 INFO  RestfulBooker:118 - ==========================| checking all the headers|==========================
+2022-06-09 12:03:49 INFO  RestfulBooker:132 - ========================<<|Finished TA0001_GET_getAllBookings|>>========================
+2022-06-09 12:04:20 INFO  RestfulBooker:25 - ========================<<|TC0008_createToken|>>========================
+2022-06-09 12:04:24 INFO  RestfulBooker:107 - ==========================| checking content type |==========================
+2022-06-09 12:04:24 INFO  RestfulBooker:111 - Content Encoding -->  application/json; charset=utf-8
+2022-06-09 12:04:24 INFO  RestfulBooker:48 - ==========================| checking response body |=========================
+2022-06-09 12:04:24 INFO  RestfulBooker:52 - Response Body --> {"token":"fc8f7b6cb32b656"}
+2022-06-09 12:04:24 INFO  RestfulBooker:82 - ==========================| checking response time |==========================
+2022-06-09 12:04:24 INFO  RestfulBooker:86 - Response Time -->  2968
+2022-06-09 12:04:24 INFO  RestfulBooker:97 - ==========================| checking response server |==========================
+2022-06-09 12:04:24 INFO  RestfulBooker:101 - Server --> Cowboy
+2022-06-09 12:04:24 INFO  RestfulBooker:59 - ==========================| checking status code |==========================
+2022-06-09 12:04:24 INFO  RestfulBooker:63 - Status code --> 200
+2022-06-09 12:04:24 INFO  RestfulBooker:71 - ==========================| checking status line |==========================
+2022-06-09 12:04:24 INFO  RestfulBooker:75 - Status Line --> HTTP/1.1 200 OK
+2022-06-09 12:04:24 INFO  RestfulBooker:118 - ==========================| checking all the headers|==========================
+2022-06-09 12:04:24 INFO  RestfulBooker:125 - Server		Cowboy
+2022-06-09 12:04:24 INFO  RestfulBooker:125 - Connection		keep-alive
+2022-06-09 12:04:24 INFO  RestfulBooker:125 - X-Powered-By		Express
+2022-06-09 12:04:24 INFO  RestfulBooker:125 - Content-Type		application/json; charset=utf-8
+2022-06-09 12:04:24 INFO  RestfulBooker:125 - Content-Length		27
+2022-06-09 12:04:24 INFO  RestfulBooker:125 - Etag		W/"1b-tQMjT+Y/jiQeXy4+9C18E5Q7V/I"
+2022-06-09 12:04:24 INFO  RestfulBooker:125 - Date		Thu, 09 Jun 2022 06:04:23 GMT
+2022-06-09 12:04:24 INFO  RestfulBooker:125 - Via		1.1 vegur
+2022-06-09 12:04:24 INFO  RestfulBooker:132 - ========================<<|Finished TA0001_GET_getAllBookings|>>========================
+2022-06-09 12:09:26 INFO  RestfulBooker:25 - ========================<<|TC0008_createToken|>>========================
+2022-06-09 12:09:30 INFO  RestfulBooker:109 - ==========================| checking content type |==========================
+2022-06-09 12:09:30 INFO  RestfulBooker:113 - Content Encoding -->  application/json; charset=utf-8
+2022-06-09 12:09:30 INFO  RestfulBooker:48 - ==========================| checking response body |=========================
+2022-06-09 12:09:30 INFO  RestfulBooker:52 - Response Body --> {"token":"cea62e36c823960"}
+2022-06-09 12:09:30 INFO  RestfulBooker:82 - ==========================| checking response time |==========================
+2022-06-09 12:09:30 INFO  RestfulBooker:86 - Response Time -->  3111
+2022-06-09 12:09:30 WARN  RestfulBooker:88 - response time is greater than 3000
+2022-06-09 12:09:30 INFO  RestfulBooker:97 - ==========================| checking response server |==========================
+2022-06-09 12:09:30 INFO  RestfulBooker:101 - Server --> Cowboy
+2022-06-09 12:09:30 INFO  RestfulBooker:59 - ==========================| checking status code |==========================
+2022-06-09 12:09:30 INFO  RestfulBooker:63 - Status code --> 200
+2022-06-09 12:09:30 INFO  RestfulBooker:71 - ==========================| checking status line |==========================
+2022-06-09 12:09:30 INFO  RestfulBooker:75 - Status Line --> HTTP/1.1 200 OK
+2022-06-09 12:09:30 INFO  RestfulBooker:120 - ==========================| checking all the headers|==========================
+2022-06-09 12:09:30 INFO  RestfulBooker:127 - Server		Cowboy
+2022-06-09 12:09:30 INFO  RestfulBooker:127 - Connection		keep-alive
+2022-06-09 12:09:30 INFO  RestfulBooker:127 - X-Powered-By		Express
+2022-06-09 12:09:30 INFO  RestfulBooker:127 - Content-Type		application/json; charset=utf-8
+2022-06-09 12:09:30 INFO  RestfulBooker:127 - Content-Length		27
+2022-06-09 12:09:30 INFO  RestfulBooker:127 - Etag		W/"1b-U93MQ8WuIoumgsplI0T8pwTbqBk"
+2022-06-09 12:09:30 INFO  RestfulBooker:127 - Date		Thu, 09 Jun 2022 06:09:29 GMT
+2022-06-09 12:09:30 INFO  RestfulBooker:127 - Via		1.1 vegur
+2022-06-09 12:09:30 INFO  RestfulBooker:134 - ========================<<| Finished TC0008_createToken |>>========================

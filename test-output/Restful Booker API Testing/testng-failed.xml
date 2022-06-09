@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Restful Booker API Testing]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="RestfulBooker(failed)">
+    <classes>
+      <class name="com.restfulbooker.testcases.TA0002_GET_getBookingDetails">
+        <methods>
+          <include name="getEveryDetails"/>
+          <include name="checkContentEncoding"/>
+          <include name="checkStatusCode"/>
+          <include name="checkStatusLine"/>
+          <include name="getBookingDetails"/>
+          <include name="getBookingDetails"/>
+          <include name="getAllHeaders"/>
+          <include name="checkServer"/>
+          <include name="checkResponseBody"/>
+          <include name="checkResponseTime"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.restfulbooker.testcases.TA0002_GET_getBookingDetails -->
+    </classes>
+  </test> <!-- RestfulBooker(failed) -->
+</suite> <!-- Failed suite [Restful Booker API Testing] -->
