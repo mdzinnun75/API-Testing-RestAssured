@@ -25,14 +25,14 @@ public class TA0002_GET_getBookingDetails extends BaseClass{
 	
 			// specify the base url
 			RestAssured.baseURI="https://restful-booker.herokuapp.com/";
-	
+
 			// Request object
 			httpRequest= RestAssured.given();
 			
 			
 			// Response object
 			response= httpRequest.request(Method.GET, 
-					"/booking/2276");
+					"/booking/"+bookingId);
 		}
 		
 	

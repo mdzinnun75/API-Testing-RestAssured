@@ -2,52 +2,52 @@
 <testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-06-09T12:09:26 BDT" name="Default suite" finished-at="2022-06-09T12:09:30 BDT" duration-ms="4197">
+  <suite started-at="2022-06-19T12:04:11 BDT" name="Default suite" finished-at="2022-06-19T12:04:30 BDT" duration-ms="18742">
     <groups>
     </groups>
-    <test started-at="2022-06-09T12:09:26 BDT" name="Default test" finished-at="2022-06-09T12:09:30 BDT" duration-ms="4197">
-      <class name="com.restfulbooker.testcases.TC0008_createToken">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.restfulbooker.testcases.TC0008_createToken@6babf3bf]" started-at="2022-06-09T12:09:26 BDT" name="setup" finished-at="2022-06-09T12:09:26 BDT" duration-ms="100" status="PASS">
+    <test started-at="2022-06-19T12:04:11 BDT" name="Default test" finished-at="2022-06-19T12:04:30 BDT" duration-ms="18742">
+      <class name="com.restfulbooker.testcases.TA0001_GET_getAllBookings">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.restfulbooker.testcases.TA0001_GET_getAllBookings@5c20aab9]" started-at="2022-06-19T12:04:11 BDT" name="setup" finished-at="2022-06-19T12:04:11 BDT" duration-ms="113" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="createToken()[pri:0, instance:com.restfulbooker.testcases.TC0008_createToken@6babf3bf]" started-at="2022-06-09T12:09:26 BDT" name="createToken" finished-at="2022-06-09T12:09:30 BDT" duration-ms="4013" status="PASS">
+        <test-method is-config="true" signature="getAllBookingIDs()[pri:0, instance:com.restfulbooker.testcases.TA0001_GET_getAllBookings@5c20aab9]" started-at="2022-06-19T12:04:11 BDT" name="getAllBookingIDs" finished-at="2022-06-19T12:04:20 BDT" duration-ms="8861" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createToken -->
-        <test-method signature="checkContentEncoding()[pri:0, instance:com.restfulbooker.testcases.TC0008_createToken@6babf3bf]" started-at="2022-06-09T12:09:30 BDT" name="checkContentEncoding" finished-at="2022-06-09T12:09:30 BDT" duration-ms="9" status="PASS">
+        </test-method> <!-- getAllBookingIDs -->
+        <test-method signature="checkContentEncoding()[pri:0, instance:com.restfulbooker.testcases.TA0001_GET_getAllBookings@5c20aab9]" started-at="2022-06-19T12:04:20 BDT" name="checkContentEncoding" finished-at="2022-06-19T12:04:20 BDT" duration-ms="71" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkContentEncoding -->
-        <test-method signature="checkResponseBody()[pri:0, instance:com.restfulbooker.testcases.TC0008_createToken@6babf3bf]" started-at="2022-06-09T12:09:30 BDT" name="checkResponseBody" finished-at="2022-06-09T12:09:30 BDT" duration-ms="15" status="PASS">
+        <test-method signature="checkResponseBody()[pri:0, instance:com.restfulbooker.testcases.TA0001_GET_getAllBookings@5c20aab9]" started-at="2022-06-19T12:04:20 BDT" name="checkResponseBody" finished-at="2022-06-19T12:04:30 BDT" duration-ms="9438" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkResponseBody -->
-        <test-method signature="checkResponseTime()[pri:0, instance:com.restfulbooker.testcases.TC0008_createToken@6babf3bf]" started-at="2022-06-09T12:09:30 BDT" name="checkResponseTime" finished-at="2022-06-09T12:09:30 BDT" duration-ms="9" status="PASS">
+        <test-method signature="checkResponseTime()[pri:0, instance:com.restfulbooker.testcases.TA0001_GET_getAllBookings@5c20aab9]" started-at="2022-06-19T12:04:30 BDT" name="checkResponseTime" finished-at="2022-06-19T12:04:30 BDT" duration-ms="19" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkResponseTime -->
-        <test-method signature="checkServer()[pri:0, instance:com.restfulbooker.testcases.TC0008_createToken@6babf3bf]" started-at="2022-06-09T12:09:30 BDT" name="checkServer" finished-at="2022-06-09T12:09:30 BDT" duration-ms="2" status="PASS">
+        <test-method signature="checkServer()[pri:0, instance:com.restfulbooker.testcases.TA0001_GET_getAllBookings@5c20aab9]" started-at="2022-06-19T12:04:30 BDT" name="checkServer" finished-at="2022-06-19T12:04:30 BDT" duration-ms="5" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkServer -->
-        <test-method signature="checkStatusCode()[pri:0, instance:com.restfulbooker.testcases.TC0008_createToken@6babf3bf]" started-at="2022-06-09T12:09:30 BDT" name="checkStatusCode" finished-at="2022-06-09T12:09:30 BDT" duration-ms="3" status="PASS">
+        <test-method signature="checkStatusCode()[pri:0, instance:com.restfulbooker.testcases.TA0001_GET_getAllBookings@5c20aab9]" started-at="2022-06-19T12:04:30 BDT" name="checkStatusCode" finished-at="2022-06-19T12:04:30 BDT" duration-ms="4" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkStatusCode -->
-        <test-method signature="checkStatusLine()[pri:0, instance:com.restfulbooker.testcases.TC0008_createToken@6babf3bf]" started-at="2022-06-09T12:09:30 BDT" name="checkStatusLine" finished-at="2022-06-09T12:09:30 BDT" duration-ms="2" status="PASS">
+        <test-method signature="checkStatusLine()[pri:0, instance:com.restfulbooker.testcases.TA0001_GET_getAllBookings@5c20aab9]" started-at="2022-06-19T12:04:30 BDT" name="checkStatusLine" finished-at="2022-06-19T12:04:30 BDT" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkStatusLine -->
-        <test-method signature="getAllHeaders()[pri:0, instance:com.restfulbooker.testcases.TC0008_createToken@6babf3bf]" started-at="2022-06-09T12:09:30 BDT" name="getAllHeaders" finished-at="2022-06-09T12:09:30 BDT" duration-ms="4" status="PASS">
+        <test-method signature="getAllHeaders()[pri:0, instance:com.restfulbooker.testcases.TA0001_GET_getAllBookings@5c20aab9]" started-at="2022-06-19T12:04:30 BDT" name="getAllHeaders" finished-at="2022-06-19T12:04:30 BDT" duration-ms="6" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getAllHeaders -->
-        <test-method signature="tearDown()[pri:0, instance:com.restfulbooker.testcases.TC0008_createToken@6babf3bf]" started-at="2022-06-09T12:09:30 BDT" name="tearDown" finished-at="2022-06-09T12:09:30 BDT" duration-ms="1" status="PASS">
+        <test-method signature="tearDown()[pri:0, instance:com.restfulbooker.testcases.TA0001_GET_getAllBookings@5c20aab9]" started-at="2022-06-19T12:04:30 BDT" name="tearDown" finished-at="2022-06-19T12:04:30 BDT" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.restfulbooker.testcases.TC0008_createToken -->
+      </class> <!-- com.restfulbooker.testcases.TA0001_GET_getAllBookings -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

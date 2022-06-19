@@ -40,7 +40,7 @@ public class TA0005_PATCH_partialUpdateBooking extends BaseClass{
 		httpRequest.body(jsonBooking.toJSONString());
 
 		// Response object
-		response=httpRequest.request(Method.PATCH, "/booking/34306");
+		response=httpRequest.request(Method.PATCH, "/booking/"+bookingId);
 
 	}
 	

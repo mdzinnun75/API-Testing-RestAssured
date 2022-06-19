@@ -17,13 +17,9 @@ public class BaseClass {
 
 	public static RequestSpecification httpRequest;
 	public static Response response;
-	public int booking_id;
-	public String firstName="";
-	public String lastName="";
-	public String checkIn="";
-	public String checkOut="";
-
 	public static Logger log;
+	
+	public static int bookingId=669;
 
 	@BeforeClass
 	public void setup() {

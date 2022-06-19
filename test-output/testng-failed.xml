@@ -3,19 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.restfulbooker.testcases.TC0008_createToken">
+      <class name="com.restfulbooker.testcases.TA0006_DELETE_deleteBooking">
         <methods>
           <include name="checkContentEncoding"/>
-          <include name="createToken"/>
-          <include name="checkResponseTime"/>
-          <include name="getAllHeaders"/>
-          <include name="checkServer"/>
-          <include name="checkStatusCode"/>
-          <include name="checkStatusLine"/>
-          <include name="checkResponseBody"/>
+          <include name="getBookingDetails"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- com.restfulbooker.testcases.TC0008_createToken -->
+      </class> <!-- com.restfulbooker.testcases.TA0006_DELETE_deleteBooking -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

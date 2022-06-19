@@ -27,7 +27,7 @@ public class TA0006_DELETE_deleteBooking extends BaseClass{
 			httpRequest.header("Content-Type", "application/json");
 	
 			// Response object
-			response= httpRequest.request(Method.DELETE, "booking/212764"); // deleting a user created by the POST method will work
+			response= httpRequest.request(Method.DELETE, "booking/"+bookingId); // deleting a user created by the POST method will work
 		}
 		
 		
@@ -63,7 +63,7 @@ public class TA0006_DELETE_deleteBooking extends BaseClass{
 			// Status line verification
 			String statusline=response.getStatusLine();
 			log.info("Status Line --> "+ statusline);
-			Assert.assertEquals(statusline, "HTTP/1.1 201 OK");
+			Assert.assertEquals(statusline, "HTTP/1.1 201 Created");
 		}
 		
 		
@@ -102,7 +102,7 @@ public class TA0006_DELETE_deleteBooking extends BaseClass{
 			// Content Type validation
 			String contentType= response.header("Content-Type");
 			log.info("Content Encoding  -->  "+ contentType);
-			Assert.assertEquals(contentType, "application/json; charset=utf-8");
+			Assert.assertEquals(contentType, "text/plain; charset=utf-8");
 		}
 
 		@Test

@@ -32,6 +32,7 @@ import io.restassured.specification.RequestSpecification;
 public class TA0003_POST_createBooking extends BaseClass{
 	
 	String firstName;
+	int booking_id;
 	
 		@BeforeClass
 		void createBooking() {
@@ -92,7 +93,7 @@ public class TA0003_POST_createBooking extends BaseClass{
 		void checkBookingID() {
 			log.info("==========================| checking booking id |==========================");
 
-			// getting booking id
+			//getting booking id
 			JsonPath jsonpath= response.jsonPath();
 			booking_id= jsonpath.get("bookingid");
 			String nodeValue1= jsonpath.get("bookingid").toString();

@@ -59,7 +59,7 @@ public class TA0004_PUT_updateBooking extends BaseClass{
 		httpRequest.body(jsonBooking.toJSONString());
 
 		// Response object
-		response=httpRequest.request(Method.PUT, "/booking/34306");
+		response=httpRequest.request(Method.PUT, "/booking/"+bookingId);
 
 	}
 	
