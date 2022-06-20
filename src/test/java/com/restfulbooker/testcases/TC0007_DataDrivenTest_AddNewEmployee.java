@@ -12,6 +12,11 @@ import org.testng.annotations.Test;
 import com.restfulbooker.base.BaseClass;
 import com.restfulbooker.utilities.XLUtils;
 
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.Step;
 import io.restassured.RestAssured;
 import io.restassured.http.Method;
 import io.restassured.response.Response;
@@ -20,6 +25,9 @@ import io.restassured.specification.RequestSpecification;
 
 public class TC0007_DataDrivenTest_AddNewEmployee extends BaseClass{
 
+	String firstname;
+	String lastname;
+	
 	@DataProvider(name="empDataProvider")
 	String[][] getEmpData() throws IOException{
 
@@ -44,7 +52,10 @@ public class TC0007_DataDrivenTest_AddNewEmployee extends BaseClass{
 
 
 
-
+	@Epic("EP001")
+	@Feature("Create Batch Booking")
+	@Step(" Defining Request & Response object, Sending User Details, Validating Status Code & Status Line")
+	@Severity(SeverityLevel.BLOCKER)
 	@Test(dataProvider = "empDataProvider")
 	void postNewEmployees(String firstname, String lastname, String totalprice,
 							String depositpaid, String  checkin, String checkout,
@@ -76,16 +87,18 @@ public class TC0007_DataDrivenTest_AddNewEmployee extends BaseClass{
 
 		// Response object
 		response=httpRequest.request(Method.POST, "/booking");
-
+		
 		// capture response body to perform validation
 		String responseBody= response.getBody().asString();
-		System.out.println("Response Body is: "+ responseBody);
+		System.out.println("Response Body --> "+ responseBody);
 		Assert.assertEquals(responseBody.contains(firstname), true);
 		Assert.assertEquals(responseBody.contains(lastname), true);
 		Assert.assertEquals(response.getStatusCode(), 200);
 		Assert.assertEquals(response.getStatusLine(), "HTTP/1.1 200 OK");
 
 		Thread.sleep(1000);
-
 	}
+
+	
+	
 }

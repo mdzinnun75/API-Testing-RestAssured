@@ -9,6 +9,11 @@ import org.testng.annotations.Test;
 
 import com.restfulbooker.base.BaseClass;
 
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.Step;
 import io.restassured.RestAssured;
 import io.restassured.http.Header;
 import io.restassured.http.Headers;
@@ -19,6 +24,11 @@ import io.restassured.specification.RequestSpecification;
 
 public class TC0008_createToken extends BaseClass{
 	
+	
+	@Epic("EP001")
+	@Feature("Create Token")
+	@Step("#1 Defining Request & Response object")
+	@Severity(SeverityLevel.BLOCKER)
 	@BeforeClass
 	void createToken() {
 		
@@ -42,6 +52,10 @@ public class TC0008_createToken extends BaseClass{
 		 response= httpRequest.request(Method.POST, "/auth");
 	}
 	
+	@Epic("EP001")
+	@Feature("Create Token")
+	@Step("#2 Checking Response Body")
+	@Severity(SeverityLevel.CRITICAL)
 	@Test
 	void checkResponseBody(){
 
@@ -53,6 +67,10 @@ public class TC0008_createToken extends BaseClass{
 		Assert.assertEquals(responseBody.contains("token"), true);
 	}
 	
+	@Epic("EP001")
+	@Feature("Create Token")
+	@Step("#3 Checking Status Code")
+	@Severity(SeverityLevel.CRITICAL)
 	@Test
 	void checkStatusCode() {
 		
@@ -64,7 +82,10 @@ public class TC0008_createToken extends BaseClass{
 		Assert.assertEquals(statusCode, 200);
 	}
 	
-	
+	@Epic("EP001")
+	@Feature("Create Token")
+	@Step("#4 Checking Status Line")
+	@Severity(SeverityLevel.CRITICAL)
 	@Test
 	void checkStatusLine() {
 		
@@ -76,6 +97,11 @@ public class TC0008_createToken extends BaseClass{
 		Assert.assertEquals(statusline, "HTTP/1.1 200 OK");
 	}
 	
+	
+	@Epic("EP001")
+	@Feature("Create Token")
+	@Step("#5 Checking Response Time")
+	@Severity(SeverityLevel.NORMAL)
 	@Test
 	void checkResponseTime() {
 		
@@ -91,6 +117,10 @@ public class TC0008_createToken extends BaseClass{
 		sa.assertTrue((responseTime < 3000));
 	}
 	
+	@Epic("EP001")
+	@Feature("Create Token")
+	@Step("#6 Checking Server Name")
+	@Severity(SeverityLevel.NORMAL)
 	@Test
 	void checkServer() {
 		
@@ -102,7 +132,10 @@ public class TC0008_createToken extends BaseClass{
 		Assert.assertEquals(server, "Cowboy");
 	}
 	
-	
+	@Epic("EP001")
+	@Feature("Create Token")
+	@Step("#7 Checking Content Encoding")
+	@Severity(SeverityLevel.NORMAL)
 	@Test
 	void checkContentEncoding() {
 		
@@ -114,7 +147,10 @@ public class TC0008_createToken extends BaseClass{
 		Assert.assertEquals(contentType, "application/json; charset=utf-8");
 	}
 	
-
+	@Epic("EP001")
+	@Feature("Create Token")
+	@Step("#8 Getting All the Headers")
+	@Severity(SeverityLevel.MINOR)
 	@Test
 	void getAllHeaders() {
 		log.info("==========================| checking all the headers|==========================");
@@ -128,7 +164,9 @@ public class TC0008_createToken extends BaseClass{
 		}
 	}
 
-	
+	@Epic("EP001")
+	@Feature("Create Token")
+	@Step("#9 Tear Down")
 	@Test
 	void tearDown() {
 		log.info("========================<<| Finished TC0008_createToken |>>========================");

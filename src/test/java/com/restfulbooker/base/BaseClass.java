@@ -19,7 +19,8 @@ public class BaseClass {
 	public static Response response;
 	public static Logger log;
 	
-	public static int bookingId=669;
+	// this field is dynamic
+	public static int bookingId=2387;
 
 	@BeforeClass
 	public void setup() {

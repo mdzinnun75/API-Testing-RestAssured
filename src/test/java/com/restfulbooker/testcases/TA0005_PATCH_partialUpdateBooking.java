@@ -8,6 +8,11 @@ import org.testng.Assert;
 import com.restfulbooker.base.BaseClass;
 import com.restfulbooker.utilities.randomGenerator;
 
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.Step;
 import io.restassured.RestAssured;
 import io.restassured.http.Header;
 import io.restassured.http.Headers;
@@ -17,6 +22,11 @@ public class TA0005_PATCH_partialUpdateBooking extends BaseClass{
 
 	String firstName;
 	
+	
+	@Epic("EP001")
+	@Feature("Partial Update of a Booking")
+	@Step("#1 Defining Request & Response object, Sending User Details")
+	@Severity(SeverityLevel.BLOCKER)
 	@BeforeClass
 	void partialUpdate() {
 
@@ -44,6 +54,11 @@ public class TA0005_PATCH_partialUpdateBooking extends BaseClass{
 
 	}
 	
+	
+	@Epic("EP001")
+	@Feature("Partial Update of a Booking")
+	@Step("#2 Checking Response Body")
+	@Severity(SeverityLevel.CRITICAL)
 	@Test
 	void checkResponseBody(){
 
@@ -55,6 +70,11 @@ public class TA0005_PATCH_partialUpdateBooking extends BaseClass{
 		Assert.assertTrue(responseBody.contains(firstName));
 	}
 	
+	
+	@Epic("EP001")
+	@Feature("Partial Update of a Booking")
+	@Step("#3 Checking Status Code")
+	@Severity(SeverityLevel.CRITICAL)
 	@Test
 	void checkStatusCode() {
 		
@@ -66,6 +86,11 @@ public class TA0005_PATCH_partialUpdateBooking extends BaseClass{
 		Assert.assertEquals(statusCode, 200);
 	}
 
+	
+	@Epic("EP001")
+	@Feature("Partial Update of a Booking")
+	@Step("#4 Checking Status Line")
+	@Severity(SeverityLevel.CRITICAL)
 	@Test
 	void checkStatusLine() {
 		
@@ -77,6 +102,11 @@ public class TA0005_PATCH_partialUpdateBooking extends BaseClass{
 		Assert.assertEquals(statusline, "HTTP/1.1 200 OK");
 	}
 
+	
+	@Epic("EP001")
+	@Feature("Partial Update of a Booking")
+	@Step("#5 Checking Response Time")
+	@Severity(SeverityLevel.NORMAL)
 	@Test
 	void checkResponseTime() {
 		
@@ -92,6 +122,11 @@ public class TA0005_PATCH_partialUpdateBooking extends BaseClass{
 		sa.assertTrue((responseTime < 3000));
 	}
 	
+	
+	@Epic("EP001")
+	@Feature("Partial Update of a Booking")
+	@Step("#6 Checking Server Name")
+	@Severity(SeverityLevel.NORMAL)
 	@Test
 	void checkServer() {
 		
@@ -103,7 +138,11 @@ public class TA0005_PATCH_partialUpdateBooking extends BaseClass{
 		Assert.assertEquals(server, "Cowboy");
 	}
 
-
+	
+	@Epic("EP001")
+	@Feature("Partial Update of a Booking")
+	@Step("#7 Checking Content Encoding")
+	@Severity(SeverityLevel.NORMAL)
 	@Test
 	void checkContentEncoding() {
 		
@@ -116,6 +155,10 @@ public class TA0005_PATCH_partialUpdateBooking extends BaseClass{
 	}
 	
 
+	@Epic("EP001")
+	@Feature("Partial Update of a Booking")
+	@Step("#8 Getting All the Headers")
+	@Severity(SeverityLevel.MINOR)
 	@Test
 	void getAllHeaders() {
 		log.info("==========================| checking all the headers|==========================");
@@ -129,6 +172,10 @@ public class TA0005_PATCH_partialUpdateBooking extends BaseClass{
 		}
 	}
 	
+	
+	@Epic("EP001")
+	@Feature("Partial Update of a Booking")
+	@Step("#9 Tear Down")
 	@Test
 	void tearDown() {
 		log.info("========================<<|Finished TA0005_PATCH_partialUpdateBooking|>>========================");

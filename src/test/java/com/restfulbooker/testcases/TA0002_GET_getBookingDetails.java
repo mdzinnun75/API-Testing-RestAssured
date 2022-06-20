@@ -7,6 +7,11 @@ import org.testng.annotations.Test;
 
 import com.restfulbooker.base.BaseClass;
 
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.Step;
 import io.restassured.RestAssured;
 import io.restassured.http.Header;
 import io.restassured.http.Headers;
@@ -18,6 +23,11 @@ import io.restassured.specification.RequestSpecification;
 
 public class TA0002_GET_getBookingDetails extends BaseClass{
 
+	
+		@Epic("EP001")
+		@Feature("Get Booking Details")
+		@Step("#1 Defining Request & Response object")
+		@Severity(SeverityLevel.BLOCKER)
 		@BeforeClass
 		void getBookingDetails() {
 		
@@ -35,7 +45,11 @@ public class TA0002_GET_getBookingDetails extends BaseClass{
 					"/booking/"+bookingId);
 		}
 		
-	
+		
+		@Epic("EP001")
+		@Feature("Get Booking Details")
+		@Step("#2 Checking Response Body")
+		@Severity(SeverityLevel.CRITICAL)
 		@Test
 		void checkResponseBody(){
 
@@ -47,6 +61,12 @@ public class TA0002_GET_getBookingDetails extends BaseClass{
 			Assert.assertEquals(responseBody.contains("firstname"), true);
 		}
 
+		
+		
+		@Epic("EP001")
+		@Feature("Get Booking Details")
+		@Step("#3 Getting All the Details of a Customer")
+		@Severity(SeverityLevel.MINOR)
 		@Test
 		void getEveryDetails() {
 			
@@ -67,6 +87,11 @@ public class TA0002_GET_getBookingDetails extends BaseClass{
 			//Assert.assertEquals(jsonpath.get("firstname"), "James"); // these values are not certain.
 		}
 		
+		
+		@Epic("EP001")
+		@Feature("Get Booking Details")
+		@Step("#4 Checking Status Code")
+		@Severity(SeverityLevel.CRITICAL)
 		@Test
 		void checkStatusCode() {
 		log.info("==========================| checking status code |==========================");
@@ -77,6 +102,11 @@ public class TA0002_GET_getBookingDetails extends BaseClass{
 			Assert.assertEquals(statusCode, 200);
 		}
 		
+		
+		@Epic("EP001")
+		@Feature("Get Booking Details")
+		@Step("#5 Checking Status Line")
+		@Severity(SeverityLevel.CRITICAL)
 		@Test
 		void checkStatusLine() {
 			
@@ -89,6 +119,11 @@ public class TA0002_GET_getBookingDetails extends BaseClass{
 		}
 		
 		
+		
+		@Epic("EP001")
+		@Feature("Get Booking Details")
+		@Step("#6 Checking Response Time")
+		@Severity(SeverityLevel.NORMAL)
 		@Test
 		void checkResponseTime() {
 			
@@ -104,6 +139,11 @@ public class TA0002_GET_getBookingDetails extends BaseClass{
 			sa.assertTrue((responseTime < 3000));
 		}
 		
+		
+		@Epic("EP001")
+		@Feature("Get Booking Details")
+		@Step("#7 Checking Server Name")
+		@Severity(SeverityLevel.NORMAL)
 		@Test
 		void checkServer() {
 			
@@ -116,6 +156,11 @@ public class TA0002_GET_getBookingDetails extends BaseClass{
 		}
 		
 		
+		
+		@Epic("EP001")
+		@Feature("Get Booking Details")
+		@Step("#8 Checking Content Encoding")
+		@Severity(SeverityLevel.NORMAL)
 		@Test
 		void checkContentEncoding() {
 			
@@ -127,7 +172,11 @@ public class TA0002_GET_getBookingDetails extends BaseClass{
 			Assert.assertEquals(contentType, "application/json; charset=utf-8");
 		}
 		
-
+		
+		@Epic("EP001")
+		@Feature("Get Booking Details")
+		@Step("#9 Getting All the Headers")
+		@Severity(SeverityLevel.MINOR)
 		@Test
 		void getAllHeaders() {
 		log.info("==========================| checking all the headers|==========================");
@@ -144,6 +193,11 @@ public class TA0002_GET_getBookingDetails extends BaseClass{
 
 		}
 		
+
+		
+		@Epic("EP001")
+		@Feature("Get Booking Details")
+		@Step("#10 Tear Down")
 		@Test
 		void tearDown() {
 			log.info("========================<<|Finished TA0002_GET_getBookingDetails|>>========================");

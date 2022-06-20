@@ -1,31 +1,26 @@
 package com.restfulbooker.testcases;
 
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-import org.testng.annotations.Test;
-import org.testng.AssertJUnit;
-
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
-import org.apache.commons.lang3.RandomStringUtils;
-import org.apache.commons.lang3.RandomUtils;
 import org.json.simple.JSONObject;
 import org.testng.Assert;
-import org.testng.annotations.Test;
-
 import com.restfulbooker.base.BaseClass;
 import com.restfulbooker.utilities.randomGenerator;
 
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.Step;
 import io.restassured.RestAssured;
 import io.restassured.http.Header;
 import io.restassured.http.Headers;
 import io.restassured.http.Method;
 import io.restassured.path.json.JsonPath;
-import io.restassured.response.Response;
-import io.restassured.specification.RequestSpecification;
 
 
 
@@ -34,6 +29,11 @@ public class TA0003_POST_createBooking extends BaseClass{
 	String firstName;
 	int booking_id;
 	
+	
+		@Epic("EP001")
+		@Feature("Create a Booking")
+		@Step("#1 Defining Request & Response object, Sending User Details")
+		@Severity(SeverityLevel.BLOCKER)
 		@BeforeClass
 		void createBooking() {
 		
@@ -77,7 +77,10 @@ public class TA0003_POST_createBooking extends BaseClass{
 			
 		}
 		
-		
+		@Epic("EP001")
+		@Feature("Create a Booking")
+		@Step("#2 Checking Response Body")
+		@Severity(SeverityLevel.CRITICAL)
 		@Test
 		void checkResponseBody(){
 
@@ -89,6 +92,11 @@ public class TA0003_POST_createBooking extends BaseClass{
 			Assert.assertEquals(responseBody.contains(firstName),true);
 		}
 		
+		
+		@Epic("EP001")
+		@Feature("Create a Booking")
+		@Step("#3 Checking Booking ID")
+		@Severity(SeverityLevel.MINOR)
 		@Test
 		void checkBookingID() {
 			log.info("==========================| checking booking id |==========================");
@@ -100,7 +108,11 @@ public class TA0003_POST_createBooking extends BaseClass{
 			log.info(nodeValue1);
 		}
 
-
+		
+		@Epic("EP001")
+		@Feature("Create a Booking")
+		@Step("#4 Checking Status Code")
+		@Severity(SeverityLevel.CRITICAL)
 		@Test
 		void checkStatusCode() {
 		log.info("==========================| checking status code |==========================");
@@ -112,6 +124,10 @@ public class TA0003_POST_createBooking extends BaseClass{
 		}
 		
 		
+		@Epic("EP001")
+		@Feature("Create a Booking")
+		@Step("#5 Checking Status Line")
+		@Severity(SeverityLevel.CRITICAL)
 		@Test
 		void checkStatusLine() {
 			
@@ -123,8 +139,13 @@ public class TA0003_POST_createBooking extends BaseClass{
 			Assert.assertEquals(statusline, "HTTP/1.1 200 OK");
 		}
 		
+		
+		@Epic("EP001")
+		@Feature("Create a Booking")
+		@Step("#6 Checking Response Time")
+		@Severity(SeverityLevel.NORMAL)
 		@Test
-		void checkResponseTime() {
+		void checkResponseTime(){
 			
 		log.info("==========================| checking response time |==========================");
 			
@@ -139,6 +160,25 @@ public class TA0003_POST_createBooking extends BaseClass{
 		}
 		
 		
+		@Epic("EP001")
+		@Feature("Create a Booking")
+		@Step("#7 Checking Server Name")
+		@Severity(SeverityLevel.NORMAL)
+		@Test
+		void checkServer() {
+			
+		log.info("==========================| checking response server |==========================");
+		
+			String server=response.header("Server");
+			log.info("Server name: "+ server);
+			Assert.assertEquals(server, "Cowboy");
+		}
+		
+		
+		@Epic("EP001")
+		@Feature("Create a Booking")
+		@Step("#8 Checking Content Encoding")
+		@Severity(SeverityLevel.NORMAL)
 		@Test
 		void checkContentEncoding() {
 			
@@ -151,18 +191,10 @@ public class TA0003_POST_createBooking extends BaseClass{
 		}
 		
 		
-		@Test
-		void checkServer() {
-			
-		log.info("==========================| checking response server |==========================");
-		
-			String server=response.header("Server");
-			log.info("Server name: "+ server);
-			Assert.assertEquals(server, "Cowboy");
-		}
-		
-		
-		
+		@Epic("EP001")
+		@Feature("Create a Booking")
+		@Step("#9 Getting All the Headers")
+		@Severity(SeverityLevel.MINOR)
 		@Test
 		void getAllHeaders() {
 		log.info("==========================| checking all the headers|==========================");
@@ -177,6 +209,10 @@ public class TA0003_POST_createBooking extends BaseClass{
 
 		}
 
+		
+		@Epic("EP001")
+		@Feature("Create a Booking")
+		@Step("#10 Tear Down")
 		@Test
 		void tearDown() {
 			log.info("========================<<|Finished TA0003_POST_createBooking|>>========================");

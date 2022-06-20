@@ -7,11 +7,11 @@
       <class name="com.restfulbooker.testcases.TA0001_GET_getAllBookings"/>
       <class name="com.restfulbooker.testcases.TA0003_POST_createBooking"/>
       <class name="com.restfulbooker.testcases.TA0002_GET_getBookingDetails"/>
-      <!--class name="com.restfulbooker.testcases.TA0004_PUT_updateBooking"/-->
-      <!--class name="com.restfulbooker.testcases.TA0005_PATCH_partialUpdateBooking"/-->
-      <!--class name="com.restfulbooker.testcases.TA0006_DELETE_deleteBooking"/-->
-      <!--class name="com.restfulbooker.testcases.TC0007_DataDrivenTest_AddNewEmployee"/-->   
-      <!--class name="com.restfulbooker.testcases.TC0008_createToken"/-->
+      <class name="com.restfulbooker.testcases.TA0004_PUT_updateBooking"/>
+      <class name="com.restfulbooker.testcases.TA0005_PATCH_partialUpdateBooking"/>
+      <class name="com.restfulbooker.testcases.TA0006_DELETE_deleteBooking"/>
+      <class name="com.restfulbooker.testcases.TC0007_DataDrivenTest_AddNewEmployee"/>   
+      <class name="com.restfulbooker.testcases.TC0008_createToken"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

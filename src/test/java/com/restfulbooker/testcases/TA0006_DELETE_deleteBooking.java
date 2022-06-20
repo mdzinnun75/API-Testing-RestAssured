@@ -6,6 +6,11 @@ import org.testng.asserts.SoftAssert;
 
 import com.restfulbooker.base.BaseClass;
 
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.Step;
 import io.restassured.RestAssured;
 import io.restassured.http.Header;
 import io.restassured.http.Headers;
@@ -13,6 +18,11 @@ import io.restassured.http.Method;
 
 public class TA0006_DELETE_deleteBooking extends BaseClass{
 
+	
+		@Epic("EP001")
+		@Feature("Delete a Bookings")
+		@Step("#1 Defining Request & Response object")
+		@Severity(SeverityLevel.BLOCKER)
 		@BeforeClass
 		void getBookingDetails()
 		{
@@ -31,7 +41,10 @@ public class TA0006_DELETE_deleteBooking extends BaseClass{
 		}
 		
 		
-		
+		@Epic("EP001")
+		@Feature("Delete a Bookings")
+		@Step("#2 Checking Response Body")
+		@Severity(SeverityLevel.CRITICAL)
 		@Test
 		void checkResponseBody(){
 	
@@ -44,6 +57,10 @@ public class TA0006_DELETE_deleteBooking extends BaseClass{
 		}
 	
 	
+		@Epic("EP001")
+		@Feature("Delete a Bookings")
+		@Step("#3 Checking Status Code")
+		@Severity(SeverityLevel.CRITICAL)
 		@Test
 		void checkStatusCode() {
 			
@@ -55,6 +72,11 @@ public class TA0006_DELETE_deleteBooking extends BaseClass{
 			Assert.assertEquals(statusCode, 201);
 		}
 	
+		
+		@Epic("EP001")
+		@Feature("Delete a Bookings")
+		@Step("#4 Checking Status Line")
+		@Severity(SeverityLevel.CRITICAL)
 		@Test
 		void checkStatusLine() {
 			
@@ -67,6 +89,11 @@ public class TA0006_DELETE_deleteBooking extends BaseClass{
 		}
 		
 		
+
+		@Epic("EP001")
+		@Feature("Delete a Bookings")
+		@Step("#5 Checking Response Time")
+		@Severity(SeverityLevel.NORMAL)
 		@Test
 		void checkResponseTime() {
 			
@@ -83,6 +110,10 @@ public class TA0006_DELETE_deleteBooking extends BaseClass{
 		}
 		
 		
+		@Epic("EP001")
+		@Feature("Delete a Bookings")
+		@Step("#6 Checking Server Name")
+		@Severity(SeverityLevel.NORMAL)
 		@Test
 		void checkServer() {
 			
@@ -94,6 +125,11 @@ public class TA0006_DELETE_deleteBooking extends BaseClass{
 			Assert.assertEquals(server, "Cowboy");
 		}
 		
+		
+		@Epic("EP001")
+		@Feature("Delete a Bookings")
+		@Step("#7 Checking Content Encoding")
+		@Severity(SeverityLevel.NORMAL)
 		@Test
 		void checkContentEncoding() {
 			
@@ -105,6 +141,10 @@ public class TA0006_DELETE_deleteBooking extends BaseClass{
 			Assert.assertEquals(contentType, "text/plain; charset=utf-8");
 		}
 
+		@Epic("EP001")
+		@Feature("Delete a Bookings")
+		@Step("#8 Getting All the Headers")
+		@Severity(SeverityLevel.MINOR)
 		@Test
 		void getAllHeaders() {
 			log.info("==========================| checking all the headers|==========================");
@@ -118,6 +158,9 @@ public class TA0006_DELETE_deleteBooking extends BaseClass{
 			}
 		}
 
+		@Epic("EP001")
+		@Feature("Delete a Bookings")
+		@Step("#9 Tear Down")
 		@Test
 		void tearDown() {
 			log.info("========================<<|Finished TA0006_DELETE_deleteBooking|>>========================");
